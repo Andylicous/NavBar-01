@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e8e9;
+  font-family: "Assistant", sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-weight: 300;
+}
+
+.logo {
+  text-decoration: none;
+  color: #e6e8e9;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.015rem;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* NavBar Style */
+
+Nav {
+  background: #00171f;
+  padding: 1rem 1rem;
+}
+
+Nav ul {
+  list-style-type: none;
+}
+
+Nav ul li a {
+  text-decoration: none;
+  color: #e6e8e9;
+}
+
+.NavBar li {
+  padding: 1rem 0.5rem;
+}
+
+.NavBar li a {
+  display: block;
+}
+
+/* Mobile style */
+
+.NavBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Hamburger-Toggle {
+  order: 1;
+}
+
+.NavBar_item.button {
+  order: 2;
+}
+
+.Hamburger-Toggle {
+  cursor: pointer;
+}
+
+.NavBar_item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+}
+
+.NavBar_item.active {
+  display: block;
+}
+
+.Bars {
+  background: #e6e8e9;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  width: 16px;
+}
+
+.Bars::before,
+.Bars::after {
+  content: "";
+  background: #e6e8e9;
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  width: 16px;
+}
+
+.Bars::before {
+  top: 5px;
+}
+.Bars::after {
+  top: -5px;
+}
+
+.button a {
+  padding: 0.5rem 1rem;
+  background: teal;
+  border-radius: 50em;
+}
+
+/* Tablet menu */
+
+@media screen and (min-width: 768px) {
+  .NavBar {
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .NavBar_item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+
+  .Hamburger-Toggle {
+    order: 2;
+  }
+
+  .button a {
+    padding: 0.5rem 1rem;
+    background: teal;
+    border-radius: 50em;
+  }
+
+  .button a:hover {
+    transition: all 250ms ease 0ms;
+    background-color: tomato;
+  }
+}
+
+/* Desktop menu */
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    order: 0;
+  }
+
+  .NavBar_item {
+    display: block;
+    width: auto;
+    order: 1;
+  }
+
+  .NavBar_item a {
+    margin-left: 24px;
+  }
+
+  .NavBar_item.button {
+    order: 2;
+  }
+
+  .NavBar_item.button a {
+    padding: 0.5rem 1rem;
+  }
+
+  .Hamburger-Toggle {
+    display: none;
+  }
+}
